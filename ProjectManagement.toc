@@ -1,0 +1,7 @@
+\contentsline {chapter}{\numberline {1}Giới thiệu khách hàng}{7}% 
+\contentsline {chapter}{\numberline {2}Yêu cầu khách hàng}{9}% 
+\contentsline {chapter}{\numberline {3}Work Breakdown Structure (WBS)}{11}% 
+\contentsline {chapter}{\numberline {4}Lập lịch}{13}% 
+\contentsline {subsection}{\numberline {4.0.1}Lập lịch công việc}{13}% 
+\contentsline {subsection}{\numberline {4.0.2}Phân phối nguồn lực}{13}% 
+\contentsline {chapter}{\numberline {5}Quản trị rủi ro}{15}% 

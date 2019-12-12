@@ -1,0 +1,141 @@
+\documentclass[a4paper]{book}
+\usepackage[utf8]{vietnam}
+\usepackage{csquotes}
+\usepackage{lipsum}
+\usepackage{times}  
+\usepackage[left=3cm,right=2cm,top=2cm,bottom=2.5cm]{geometry}
+\setlength{\parindent}{4em}
+\setlength{\parskip}{1em}
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+\renewcommand{\baselinestretch}{1.5}
+\usepackage{fancyhdr} 
+\fancyhf{}
+\cfoot{\thepage}
+\pagestyle{fancy}    
+\usepackage{graphicx}
+\usepackage{caption}
+\DeclareCaptionFormat{citation}{%
+	\ifx\captioncitation\relax\relax\else
+	\captioncitation\par
+	\fi
+	#1#2#3\par}
+\newcommand*\setcaptioncitation[1]{\def\captioncitation{\textit{Source:}~#1}}
+\let\captioncitation\relax
+\captionsetup{format=citation,justification=centering}  
+%\usepackage{wallpaper}
+%\usepackage[firstpage]{draftwatermark} 
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{1,1,1}
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+\lstset{style=mystyle}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\tikzstyle {round} = [circle, draw=green!60, fill=green!5, very thick, minimum size=7mm]
+\tikzstyle {squared} = [rectangle, draw=red!60, fill=red!5, very thick, minimum size=5mm]
+\tikzstyle {output} = [coordinate, node distance = 3cm]
+\tikzstyle {textred} = [text=red] 
+\usepackage{scrextend}
+\changefontsizes{14pt}
+%\usepackage{background}
+\usetikzlibrary{calc}
+%\backgroundsetup{scale = 1, angle = 0, opacity = 0.2,
+%contents = {\includegraphics[width = 0.9\paperwidth,
+%height = 0.9\paperheight, keepaspectratio] {hust.png}}}
+
+%\backgroundsetup{scale = 1, angle = 0, opacity = 0.2,
+%contents = {\includegraphics[width = 0.97\paperwidth,
+%height = 0.97\paperheight, keepaspectratio] {bia.png}}}
+\begin{document}
+\begin{titlepage}
+%\SetWatermarkText{\includegraphics[width = 0.97\paperwidth,
+%height = 0.97\paperheight]{bia.png}}
+%\SetWatermarkAngle{0} 
+%\SetWatermarkText{\includegraphics[scale=1]{hust.png}}
+%\SetWatermarkAngle{0}
+\begin{tikzpicture}[remember picture,overlay,inner sep=0,outer sep=0]
+     \draw[blue!70!black,line width=4pt] ([xshift=-1.5cm,yshift=-2cm]current page.north east) coordinate (A)--([xshift=1.5cm,yshift=-2cm]current page.north west) coordinate(B)--([xshift=1.5cm,yshift=2cm]current page.south west) coordinate (C)--([xshift=-1.5cm,yshift=2cm]current page.south east) coordinate(D)--cycle;
+
+     \draw ([yshift=0.5cm,xshift=-0.5cm]A)-- ([yshift=0.5cm,xshift=0.5cm]B)--
+     ([yshift=-0.5cm,xshift=0.5cm]B) --([yshift=-0.5cm,xshift=-0.5cm]B)--([yshift=0.5cm,xshift=-0.5cm]C)--([yshift=0.5cm,xshift=0.5cm]C)--([yshift=-0.5cm,xshift=0.5cm]C)-- ([yshift=-0.5cm,xshift=-0.5cm]D)--([yshift=0.5cm,xshift=-0.5cm]D)--([yshift=0.5cm,xshift=0.5cm]D)--([yshift=-0.5cm,xshift=0.5cm]A)--([yshift=-0.5cm,xshift=-0.5cm]A)--([yshift=0.5cm,xshift=-0.5cm]A);
+
+
+     \draw ([yshift=-0.3cm,xshift=0.3cm]A)-- ([yshift=-0.3cm,xshift=-0.3cm]B)--
+     ([yshift=0.3cm,xshift=-0.3cm]B) --([yshift=0.3cm,xshift=0.3cm]B)--([yshift=-0.3cm,xshift=0.3cm]C)--([yshift=-0.3cm,xshift=-0.3cm]C)--([yshift=0.3cm,xshift=-0.3cm]C)-- ([yshift=0.3cm,xshift=0.3cm]D)--([yshift=-0.3cm,xshift=0.3cm]D)--([yshift=-0.3cm,xshift=-0.3cm]D)--([yshift=0.3cm,xshift=-0.3cm]A)--([yshift=0.3cm,xshift=0.3cm]A)--([yshift=-0.3cm,xshift=0.3cm]A);
+
+   \end{tikzpicture}
+\begin{center}   
+    \textbf{TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT \\ THÀNH PHỐ HỒ CHÍ MINH}
+    \textbf{\\KHOA CÔNG NGHỆ THÔNG TIN}
+\end{center}
+\begin{center}
+	\renewcommand{\baselinestretch}{1.5}
+    \includegraphics[scale=0.6]{cntt.jpg}
+    
+    \vspace{10pt}
+    \fontsize{18pt}{17pt}\selectfont 
+    \textbf{BÁO CÁO}
+    \vspace{7pt}
+    \textbf{QUẢN LÝ DỰ ÁN}
+\end{center}
+\begin{flushleft}
+    \fontsize{14pt}{17pt}\selectfont  
+    \textbf{\textsl{ĐỀ TÀI}}
+\end{flushleft}
+\begin{center}
+    \fontsize{18pt}{17pt}\selectfont
+    \textbf{XÂY DỰNG WEBSITE XEM PHIM TRỰC TUYẾN \\}
+    \textbf{VÀ DỊCH VỤ HOSTING}
+\end{center}
+\textbf{GV hướng dẫn: Thầy Hoàng Long}
+\\
+\textbf{Nhóm sinh viên thực hiện:}
+\begin{tabbing}
+\hspace{8cm}\=\hspace{3cm}\=\hspace{3cm} \kill
+{\it \textbf{Họ và tên}}\>{\it \textbf{MSSV}}\>{\it \textbf{Mã lớp}}\\
+\begin{bfseries}Lâm Thế Vinh\end{bfseries}\> \begin{bfseries}16110523\end{bfseries}\> \begin{bfseries}1611IS\end{bfseries}\\
+\begin{bfseries}Trần Phát Hưng\end{bfseries}\> \begin{bfseries}16110350\end{bfseries}\> \begin{bfseries}1611IS\end{bfseries}\\
+\begin{bfseries}Nguyễn Bá Thuận\end{bfseries}\> \begin{bfseries}16110350\end{bfseries}\> \begin{bfseries}1611IS\end{bfseries}\\
+
+\end{tabbing}
+\begin{center}
+    \textbf{Hồ Chí Minh, 2019}
+\end{center}
+\vspace{10pt}
+\end{titlepage}
+\tableofcontents
+\chapter*{Lời mở đầu}
+\chapter{Giới thiệu khách hàng}
+\chapter{Yêu cầu khách hàng}
+\chapter{Work Breakdown Structure (WBS)}
+\chapter{Lập lịch}
+\subsection{Lập lịch công việc}
+\subsection{Phân phối nguồn lực}
+\chapter{Quản trị rủi ro}
+\newpage
+\listoffigures
+\newpage
+\bibliography{ProjectManagement} 
+\bibliographystyle{ieeetr}
+\end{document}
